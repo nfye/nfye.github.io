@@ -70,10 +70,27 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <div class="countdown text-center">        
+  <section id="hero" class="d-flex align-items-center center-password">
+    <div class="countdown absolute-countdown">        
+      <div class="clock-wrapper-target">  
+        <div class="clock-title">LAUNCHING</div>
+      <div class="clock-wrapper-target text-center">  
+        <div class="time-tg" id="clock">
+          <div id="daystg" class="cd-tg"></div>
+          <div id="hourstg" class="cd-tg">24</div>
+          <div id="minutestg" class="cd-tg">00</div>
+          <div id="secondstg" class="cd-tg">00</div>
+        </div>
+        <div class="label-wrapper-target">
+          <div class="label-target">days</div>
+          <div class="label-target">hours</div>
+          <div class="label-target">minutes</div>
+          <div class="label-target">seconds</div>          
+        </div>
       </div>
+      </div> 
+    </div> 
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">      
       <div class="row reverse-mobile">
         <div class="col-12 push-back">
           <div class="bear-container-hero">
@@ -251,7 +268,7 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    var fridayTime = moment("2021-08-24T19:00:00Z", moment.ISO_8601);
+    var fridayTime = moment("2021-09-08T20:00:00Z", moment.ISO_8601);
   
     $('#clock').countdown(fridayTime.toDate(), function(event) {
     var d = event.strftime('%D');
