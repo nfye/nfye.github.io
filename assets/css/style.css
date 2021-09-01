@@ -69,19 +69,6 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   bottom: 10%;
 }
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ec018c;
-  border-top-color: #e2eefd;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
 
 @-webkit-keyframes animate-preloader {
   0% {
@@ -509,6 +496,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 0;
 }
 
+.reverse-mobile {
+  animation: float 3s ease-in-out infinite;
+}
 @keyframes float {
 	0% {
 		transform: translatey(0px);
