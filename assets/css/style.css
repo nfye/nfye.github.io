@@ -3074,6 +3074,10 @@ section {
   }
 }
 
+.w-bear {
+  padding-bottom: 20px; 
+}
+/* 
 .launcher {
   animation-name: slideLauncher;
   animation-duration: 6s;
@@ -3086,7 +3090,7 @@ section {
   animation-duration: 6s;
   animation-delay: 4s;
   animation-iteration-count: infinite;
-  padding-bottom: 20px;
+  padding-bottom: 20px; */
 }
 @keyframes slideLauncher {
   0% {
@@ -3119,4 +3123,15 @@ section {
   100% {
     transform: scale(1) translateY(0)
   }
+}
+
+.password-bear {
+  width: 100%;
+  max-width: 100px;
+  height: auto !important;
+}
+.launcher-svg {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
 }
