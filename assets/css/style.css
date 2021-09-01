@@ -3085,7 +3085,8 @@ section {
   animation-name: replaceBear;
   animation-duration: 6s;
   animation-delay: 4s;
-  animation-iteration-count: infinite
+  animation-iteration-count: infinite;
+  padding-bottom: 20px;
 }
 @keyframes slideLauncher {
   0% {
@@ -3104,15 +3105,15 @@ section {
 
 @keyframes replaceBear {
   0% {
-    transform: scale(1)
+    transform: scale(1) translateY(0)
   }
   10% {
-    transform: scale(.2)
+    transform: scale(.2) translateY(50%)
   }
   20% {
-    transform: scale(1)
+    transform: scale(1) translateY(0)
   }
   100% {
-    transform: scale(1)
+    transform: scale(1) translateY(0)
   }
 }
