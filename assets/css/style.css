@@ -1390,10 +1390,10 @@ section {
     margin: 2px 0;
   }
   .password-bear {
-    max-width: 75px;
+    max-width: 75px !important;
   }
   .launcher-svg {
-    max-width: 200px;
+    max-width: 200px !important;
   }
 }
 .click-text {
