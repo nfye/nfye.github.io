@@ -3072,3 +3072,22 @@ section {
     opacity: 0;
   }
 }
+
+.launcher {
+  animation-name: slideLauncher;
+  animation-duration: 2s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite
+}
+
+@keyframes slideLauncher {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(20px)
+  }
+  100% {
+    transform: translateY(0)
+  }
+}
