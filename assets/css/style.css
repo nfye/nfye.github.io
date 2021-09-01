@@ -1389,6 +1389,12 @@ section {
   .button-row {
     margin: 2px 0;
   }
+  .password-bear {
+    max-width: 75px;
+  }
+  .launcher-svg {
+    max-width: 200px;
+  }
 }
 .click-text {
   margin-bottom: 5px;
