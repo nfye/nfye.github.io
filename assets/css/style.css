@@ -3125,29 +3125,30 @@ section {
 .w-bear {
   padding-bottom: 20px; 
 }
-/* 
-.launcher {
+
+.launcher-animation {
   animation-name: slideLauncher;
   animation-duration: 6s;
   animation-delay: 4s;
   animation-iteration-count: infinite;
 }
-
-.w-bear {
+.bear-animation {
   animation-name: replaceBear;
   animation-duration: 6s;
   animation-delay: 4s;
   animation-iteration-count: infinite;
-  padding-bottom: 20px; */
+  padding-bottom: 20px;
+  position: absolute;
+  bottom: 0;
 }
 @keyframes slideLauncher {
   0% {
     transform: translateY(0)
   }
-  10% {
+  15% {
     transform: translateY(20px)
   }
-  20% {
+  25% {
     transform: translateY(0)
   }
   100% {
@@ -3157,19 +3158,19 @@ section {
 
 @keyframes replaceBear {
   0% {
-    transform: scale(1) translateY(0)
-  }
-  7% {
-    transform: scale(.2) translateY(150%)
+    transform: scale(1)
   }
   10% {
-    transform: scale(0) translateY(200%)
+    transform: scale(.2)
   }
-  20% {
-    transform: scale(1) translateY(-200)
+  15% {
+    transform: scale(0)
+  }
+  25% {
+    transform: scale(1)
   }
   100% {
-    transform: scale(1) translateY(0)
+    transform: scale(1)
   }
 }
 
@@ -3182,4 +3183,12 @@ section {
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
+}
+
+.bear-swap-container {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
