@@ -763,14 +763,14 @@ body {
 
 .btn-get-started {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 10px 28px;
   border-radius: 4px;
   transition: 0.5s;
-  color: #1a163e;
+  color: #fff;
   background: #ec018c;
 }
 
@@ -2398,7 +2398,6 @@ section {
   color: #fff;
   font-size: 14px;
   background: transparent;
-  font-size: 10px;
 }
 
 #footer .footer-newsletter {
@@ -3191,4 +3190,52 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.h-unset {
+  height: unset !important;
+}
+.center-clouds {
+  z-index: -2;
+}
+
+
+.stage, .ring, .img {
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select:none;
+}
+
+.container-3d {
+  perspective: 2000px;
+  width: 300px;
+  height: 400px;  
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+
+.stage, .ring, .img {
+  width:100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  user-select:none;
+}
+
+.div3d, .svg3d {
+  position: absolute;
+}
+
+.container-3d {
+  perspective: 2000px;
+  width: 300px;
+  height: 400px;  
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+}
+
+.pos-abs div {
+  position: absolute;
 }
