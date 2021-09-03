@@ -539,6 +539,9 @@ h1, h2, h3, h4, h5, h6 {
 .reverse-mobile {
   animation: float 3s ease-in-out infinite;
 }
+.no-float {
+  animation: none !important;
+}
 @keyframes float {
 	0% {
 		transform: translatey(0px);
