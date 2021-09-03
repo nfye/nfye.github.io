@@ -3213,7 +3213,7 @@ section {
 .container-3d {
   perspective: 2000px;
   width: 300px;
-  height: 600px;  
+  height: 400px;  
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
@@ -3221,4 +3221,8 @@ section {
 
 .pos-abs div {
   position: absolute;
+}
+.stage-h {
+  height: 600px;
+  width: 100%;
 }

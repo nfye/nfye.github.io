@@ -285,23 +285,25 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="stage pos-abs">
+      <div class="stage-h">
+        <div class="stage pos-abs">
 
-        <div class="container-3d pos-abs">
-          <div class="ring" >
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
-            <div class="img"></div>
+          <div class="container-3d pos-abs">
+            <div class="ring" >
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+              <div class="img"></div>
+            </div>
           </div>
+          
         </div>
-        
       </div>
       <div class="container" data-aos="fade-up">
 
@@ -500,7 +502,7 @@ function dragEnd(e){
 
 
 function getBgPos(i){ //returns the background-position string to create parallax movement in each image
-  return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 200px';
+  return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 0';
 }
   </script>
   <script>
