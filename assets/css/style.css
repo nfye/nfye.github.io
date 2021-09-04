@@ -257,7 +257,12 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   max-height: 100px;
 }
-
+.w-900 {
+  font-weight: 900;
+}
+.w-700 {
+  font-weight: 700;
+}
 @media (max-width: 992px) {
   #header {
     padding: 15px;
@@ -605,7 +610,7 @@ article {
 .timeline__nav {
   position: sticky;
   z-index: 99;
-  top: 225px;
+  top: 50px;
   transition: top 0.3s ease-out;
   
   top: 220px;
