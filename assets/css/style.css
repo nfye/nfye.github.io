@@ -242,7 +242,10 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   padding: 15px;
 }
-
+.fa-play-circle {
+  width: 22px;
+  color: #ec018c;
+}
 #header .logo {
   font-size: 32px;
   margin: 0;
