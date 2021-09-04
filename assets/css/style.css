@@ -3360,4 +3360,5 @@ section {
 .stage-h {
   height: 450px;
   width: 100%;
+  overflow: hidden;
 }
