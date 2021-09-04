@@ -3395,3 +3395,10 @@ section {
   z-index: 10;
   cursor: pointer;
 }
+.team-name {
+  font-size: 32px;
+  margin-bottom: -1px;
+}
+.w-full {
+  width: 100%;
+}
