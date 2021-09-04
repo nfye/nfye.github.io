@@ -164,6 +164,11 @@
     time: 1000
   });
 
+  // Initiate venobox (lightbox feature used in portofilo)
+  $(document).ready(function() {
+    $('.venobox').venobox();
+  });
+
   // Init AOS
   function aos_init() {
     AOS.init({
