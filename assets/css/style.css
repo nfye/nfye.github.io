@@ -3367,4 +3367,29 @@ section {
   height: 450px;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  max-width: 1140px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+.arrow-right {
+  position: absolute;
+  right: 0;
+  width: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 12px;
+  z-index: 10;
+}
+.arrow-left {
+  position: absolute;
+  left: 0;
+  width: 56px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  padding: 12px;
+  z-index: 10;
 }
