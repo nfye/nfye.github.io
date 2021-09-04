@@ -843,8 +843,8 @@ function getBgPos(i){ //returns the background-position string to create paralla
   });
 
   window.addEventListener("mousemove", function (e) {
-    worldYAngle = -(0.5 - e.clientX / window.innerWidth) * 180;
-    worldXAngle = (0.5 - e.clientY / window.innerHeight) * 180;
+    worldYAngle = -(0.5 - e.clientX / window.innerWidth) * 9;
+    worldXAngle = (0.5 - e.clientY / window.innerHeight) * 9;
     //worldXAngle = .1 * ( e.clientY - .5 * window.innerHeight );
     //worldYAngle = .1 * ( e.clientX - .5 * window.innerWidth );
     updateView();
