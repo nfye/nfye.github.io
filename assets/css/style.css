@@ -673,9 +673,16 @@ article {
   z-index: 1;
   padding: 0 20px;
 }
+.wrapper h2 {
+  font-weight: 900;
+  color: #ec018c;
+}
 @media only screen and (max-width: 768px) {
   .timeline__nav {
     display: none;
+  }
+  .timeline {
+    width: 100%;
   }
   .wrapper h2 {
     font-size: 18px;
@@ -814,7 +821,7 @@ body {
 #hero h1 {
   margin: 0;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 56px;
   color: #fff;
 }
@@ -1401,6 +1408,7 @@ section {
 
 .section-title h3 span {
   color: #ec018c;
+  font-weight: 900;
 }
 
 .section-title p {
