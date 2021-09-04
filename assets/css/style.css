@@ -246,6 +246,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 22px;
   color: #ec018c;
 }
+.fa-twitter, .fa-discord {
+  color: #FFF;
+  width: 54px;
+  padding: 0 12px;
+  color: #ec018c;
+  margin-top: 24px;
+}
 #header .logo {
   font-size: 32px;
   margin: 0;
