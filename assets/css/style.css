@@ -231,6 +231,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.fa-chevron-up {
+  width: 32px;
+  color: #fff;
+  background-color: #ec018c;
+  padding: 6px 8px;
+  border-radius: 4px
+}
 #header.header-scrolled {
   top: 0;
   padding: 15px;
