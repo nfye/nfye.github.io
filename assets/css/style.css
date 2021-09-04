@@ -544,6 +544,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 0;
   overflow: hidden;
 }
+.center-btn {
+  display: flex;
+  align-items: center;
+}
 .reverse-mobile {
   animation: float 3s ease-in-out infinite;
 }
@@ -562,6 +566,51 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+
+article {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.timeline__nav {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  transition: top 0.3s ease-out;
+  
+  top: 220px;
+  display: inline-block;
+  width: 16%;
+  float: left;
+}
+.timeline__nav ul {
+  list-style: none;
+  list-style-position: inside;
+  margin: 15px 0;
+}
+.timeline__nav ul li {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style-type: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.timeline__nav ul li.active {
+  font-weight: bold;
+  color: #ec018c;
+  transform: scale(1.2);
+}
+.timeline__nav ul li:hover {
+  color: #000;
+}
+.timeline__section {
+  padding: 0 !important;
+}
+.description-section {
+  color: #fff;
+}
 .mobile-nav * {
   margin: 0;
   padding: 0;
@@ -807,6 +856,8 @@ body {
   padding-left: 4rem;
   margin: 0 0 0 30px;
   color: white;
+  width: 80%;
+  display: inline-block;
 }
 .timeline:before {
   content: "";
@@ -815,7 +866,7 @@ body {
   top: 0;
   width: 4px;
   height: 100%;
-  background: #27293d;
+  background: #ec018c;
 }
 .timeline .timeline-container {
   position: relative;
@@ -1297,7 +1348,7 @@ ol, ul { list-style: none }
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .section-bg {

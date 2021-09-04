@@ -273,6 +273,10 @@
   </section><!-- End Hero -->
 
   <main id="main">    
+<!-- 
+    <div id="viewport" >
+      <div id="world" ></div>
+    </div> -->
 
 
     <!-- ======= About Section ======= -->
@@ -328,7 +332,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h3><span>Total Minted</span></h3>          
+          <h3><span>TOTAL MINTED</span></h3>          
         </div>
         <div class="row mint-count">
               <span data-toggle="counter-up" class="mintedAmount">0</span>/<span data-toggle="counter-up">20000</span>
@@ -339,7 +343,7 @@
 
         <div class="row text-center mt-5">
             <div class="col-md-12">
-                <img id="metaicon" class="meta-gray" width="100" height="100" src="./assets/img/metamask.png" alt="">
+                <img id="metaicon" class="meta-gray" width="125" height="265" src="./assets/img/Metamask_bear.png" alt="">
             </div>
         </div>
         <div style="margin-top: 30px;" class="row text-center">
@@ -364,29 +368,59 @@
         <div class="section-title">
           <h3><span>ROADMAP</span></h3>          
         </div>
-      </div>
-
-      <div class="container text-white">
-
-        <div class="row text-center mt-5">
-            <div class="col-md-12">       
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu imperdiet sapien. Suspendisse nec sapien dignissim, bibendum leo ut, viverra eros. Morbi aliquet iaculis purus vitae iaculis. Morbi rhoncus ullamcorper nunc ut scelerisque. Aenean sit amet justo tincidunt, tristique enim a, efficitur erat. Suspendisse potenti. Cras a egestas ligula. Pellentesque risus libero, malesuada eu arcu in, egestas luctus quam. Cras aliquet viverra nibh non convallis. Vivamus at orci vel arcu sodales tristique.
-              </p>                       
-              <p>
-                Mauris et diam enim. Morbi aliquet turpis viverra neque suscipit, nec fringilla risus gravida. Ut fringilla sodales tellus, eget congue mi suscipit eu. Donec efficitur ac justo ac mattis. Fusce tristique risus eget leo fringilla consequat. Morbi ut mattis ex, ut rutrum ipsum. Phasellus quis velit sed quam mollis condimentum. Nullam quam magna, elementum at mi finibus, aliquet imperdiet ex.
-              </p>
-            </div>
+        <div class="description-section">
+          The NFYE NFT Collection is a digitally verifiable, tradable, and fixed supply digital assets created as an exclusive collaboration and is the intersection of the Sneakerhead and NFT Community.  
+          <br><br>The NFYE community are inclusive, however NFYe Holders will have exclusive access to the following perks within the NFYe Community:
+          <br><br>
+          -  Monthly Yeezy Community Giveaways<br>
+-  Yeezy Digital Drops: NFTs of hyped Yeezy pairs, airdropped to NFYE holders wallets<br> 
+-  Limited Edition Yeezy Mafia and NFYE Merch Drops<br>
+-  Brand Collaborations, both Merch and NFT Drops<br>
+-  Artist Collaborations, both Merch and NFT Drops<br>
+-  AMAs with Artists working in Collaboration with the NFYe Community
+<br><br>Our Goal is to give NFYe Holders Community both physical and digital rewards, and create an ecosystem that has real utility and rich incentives.
         </div>
-        
       </div>
-
+      <div class="container pt-5">
+        <nav class="timeline__nav">
+          <ul>
+            <li><span>Phase 1</span></li>
+            <li><span>Phase 2</span></li>
+            <li><span>Phase 3</span></li>
+            <li><span>Phase 4</span></li>
+          </ul>
+        </nav>
+      <article class="timeline">
+        <section class="timeline__section">
+          <div class="wrapper">
+            <h2 class="milestone">PHASE 1</h2>
+            <p>Commence Monthly NFYe Community Giveaways</p>
+            <p>First Yeezy Digital Drop:</p>
+            <p>We will airdrop a Digital Pair of Yeezy to our NFYe holders. The Community will hold a vote on which pair, and the most Hyped pair will be dropped.</p>
+            <h2 class="milestone">PHASE 2</h2>
+            <p>First NFYe Digital Drop: Our first NFYe NFT airdrop.</p>
+            <p>Each Wallet containing an NFYe NFT will be airdropped 1 NFT from the Collection.</p>
+            <p>IDEAS: NFYes themed after one particular Ye Album, or Baby NFYe's</p>
+            <h2 class="milestone">PHASE 3</h2>
+            <p>NFYe VR</p>
+            <p>Enable Holders to combine their Yeezy Digital Drop + NFYe Digital Drop to generate their NFYe VR</p>
+            <p>Goal: Port NFYe VRs into the Sandbox Metaverse as useable Avatars</p>
+            <p>Allow NFYe VR owners will be able to pair their NFT to their favorite pair of Yeezys</p>
+            <p>When the Yeezys are viewed through a VR Lens, the NFYe will populate the pair of shoes.</p>
+            <h2 class="milestone">PHASE 4</h2>
+            <p>Announce first Artist Collaboration</p>
+            <p>NFYe VR Holders will have exclusive access to one-time Merch and NFT drops, created in collaboration with the Artist</p>
+            <p>Announce first Brand Collaboration</p>
+            <p>NFYe VR Holders will have exclusive access to one-time Merch and NFT drops, created in collaboration with the Brand.</p>
+          </div>
+        </section>
+      </article>
+    </div>
     </section><!-- End Roadmap Section -->
 
     <!-- ======= Roadmap Section ======= -->
     <section id="roadmap" class="roadmap">
       <div class="container" data-aos="fade-up">
-
         <div class="section-title">
           <h3><span>RARITY</span></h3>          
         </div>
@@ -402,6 +436,9 @@
             </div>
         </div>
         
+        <div class="center-btn">
+          <div class="btn btn-get-started">LEARN MORE</div>
+        </div>
       </div>
 
     </section><!-- End Roadmap Section -->
@@ -742,7 +779,7 @@ function getBgPos(i){ //returns the background-position string to create paralla
     div.style.webkitTransform = div.style.MozTransform = div.style.oTransform = div.style.transform = t;
     world.appendChild(div);
 
-    for (var j = 0; j < 5 + Math.round(Math.random() * 10); j++) {
+    for (var j = 0; j < 10 + Math.round(Math.random() * 10); j++) {
       var cloud = document.createElement("img");
       cloud.style.opacity = 0;
       var r = Math.random();
@@ -920,6 +957,80 @@ function getBgPos(i){ //returns the background-position string to create paralla
 
   update();
 
+</script>
+<script>
+  $(() => {
+  let stickyTop = 0,
+  scrollTarget = false;
+
+  let timeline = $('.timeline__nav'),
+  items = $('li', timeline),
+  milestones = $('.timeline__section .milestone'),
+  offsetTop = parseInt(timeline.css('top'));
+
+  const TIMELINE_VALUES = {
+    start: 190,
+    step: 30 };
+
+
+  $(window).resize(function () {
+    timeline.removeClass('fixed');
+
+    stickyTop = timeline.offset().top - offsetTop;
+
+    $(window).trigger('scroll');
+  }).trigger('resize');
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > stickyTop) {
+      timeline.addClass('fixed');
+    } else {
+      timeline.removeClass('fixed');
+    }
+  }).trigger('scroll');
+
+  items.find('span').click(function () {
+    let li = $(this).parent(),
+    index = li.index(),
+    milestone = milestones.eq(index);
+
+    if (!li.hasClass('active') && milestone.length) {
+      scrollTarget = index;
+
+      let scrollTargetTop = milestone.offset().top - 80;
+
+      $('html, body').animate({ scrollTop: scrollTargetTop }, {
+        duration: 400,
+        complete: function complete() {
+          scrollTarget = false;
+        } });
+
+    }
+  });
+
+  $(window).scroll(function () {
+    let viewLine = $(window).scrollTop() + $(window).height() / 3,
+    active = -1;
+
+    if (scrollTarget === false) {
+      milestones.each(function () {
+        if ($(this).offset().top - viewLine > 0) {
+          return false;
+        }
+
+        active++;
+      });
+    } else {
+      active = scrollTarget;
+    }
+
+    timeline.css('top', -1 * active * TIMELINE_VALUES.step + TIMELINE_VALUES.start + 'px');
+
+    items.filter('.active').removeClass('active');
+
+    items.eq(active != -1 ? active : 0).addClass('active');
+  }).trigger('scroll');
+});
 </script>
 </body>
 
