@@ -22,6 +22,8 @@ body {
   color: #000;
   background: transparent;
   height: 100%;
+  font-size: 1.25rem !important;
+  line-height: 1.35rem
 }
 
 a {
@@ -276,6 +278,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #header .logo img {
   max-height: 100px;
+  width: 110px;
 }
 .w-900 {
   font-weight: 900;
@@ -335,7 +338,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   color: #fff;
   transition: 0.3s;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   padding: 0 3px;
 }
