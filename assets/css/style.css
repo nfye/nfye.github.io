@@ -674,6 +674,12 @@ article {
   padding: 0 20px;
 }
 @media only screen and (max-width: 768px) {
+  .timeline__nav {
+    display: none;
+  }
+  .wrapper h2 {
+    font-size: 18px;
+  }
   .reverse-mobile {
     flex-direction: column-reverse;
   }
