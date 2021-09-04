@@ -273,10 +273,10 @@
   </section><!-- End Hero -->
 
   <main id="main">    
-<!-- 
+
     <div id="viewport" >
       <div id="world" ></div>
-    </div> -->
+    </div>
 
 
     <!-- ======= About Section ======= -->
@@ -324,31 +324,6 @@
 
     </section><!-- End About Section -->
 
-    <!-- ======= Roadmap Section ======= -->
-    <section id="roadmap" class="roadmap">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h3><span>RARITY</span></h3>          
-        </div>
-      </div>
-
-      <div class="container text-white">
-
-        <div class="row text-center mt-5">
-            <div class="col-md-12">                             
-              <p>
-                Each NFT in the NFYE collection has varying degrees of rarity. Much like in the sneaker world, the rarer the NFT the more sought after it will be in the secondary market such as on OpenSea. Click below to learn more about the rarest NFTs available in the collection. 
-              </p>
-            </div>
-        </div>
-        
-        <div class="center-btn">
-          <div class="btn btn-get-started">LEARN MORE</div>
-        </div>
-      </div>
-
-    </section><!-- End Roadmap Section -->
-
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
       <div class="container" data-aos="fade-up">
@@ -370,7 +345,7 @@
         </div>
         <div style="margin-top: 30px;" class="row text-center">
             <div class="col-md-12">
-                <button id="enableMetamask" class="btn btn-get-started">Connect with Metamask</button>
+                <button id="enableMetamask" class="btn btn-get-started" disabled>Metamask Currently Disabled</button>
             </div>
         </div>
         <div class="row text-center">
@@ -440,6 +415,30 @@
     </div>
     </section><!-- End Roadmap Section -->
 
+    <!-- ======= Roadmap Section ======= -->
+    <section id="roadmap" class="roadmap">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h3><span>RARITY</span></h3>          
+        </div>
+      </div>
+
+      <div class="container text-white">
+
+        <div class="row text-center mt-5">
+            <div class="col-md-12">                             
+              <p>
+                Each NFT in the NFYE collection has varying degrees of rarity. Much like in the sneaker world, the rarer the NFT the more sought after it will be in the secondary market such as on OpenSea. Click below to learn more about the rarest NFTs available in the collection. 
+              </p>
+            </div>
+        </div>
+        
+        <div class="center-btn">
+          <a class="btn btn-get-started" href="/rarity">LEARN MORE</a>
+        </div>
+      </div>
+
+    </section><!-- End Roadmap Section -->
 
     <!-- ======= Team Section ======= -->
     <!-- <section id="team" class="team">
@@ -676,7 +675,7 @@ function getBgPos(i){ //returns the background-position string to create paralla
     world = document.getElementById("world"),
     viewport = document.getElementById("viewport"),
     d = 0,
-    p = 400,
+    p = 100,
     worldXAngle = 0,
     worldYAngle = 0,
     computedWeights = [];
