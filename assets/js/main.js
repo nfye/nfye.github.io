@@ -1,9 +1,3 @@
-/**
-* Template Name: BizLand - v1.2.1
-* Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -169,86 +163,6 @@
     delay: 10,
     time: 1000
   });
-
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  // Porfolio isotope and filter
-  $(window).on('load', function() {
-    var portfolioIsotope = $('.portfolio-container').isotope({
-      itemSelector: '.portfolio-item'
-    });
-
-    $('#portfolio-flters li').on('click', function() {
-      $("#portfolio-flters li").removeClass('filter-active');
-      $(this).addClass('filter-active');
-
-      portfolioIsotope.isotope({
-        filter: $(this).data('filter')
-      });
-      aos_init();
-    });
-
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox();
-    });
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  // Portfolio details carousel
-  $(".gameboy-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  var owl = $('.gameboy-carousel');
-  // Go to the next item
-    $('.btn-4').click(function() {
-      owl.trigger('next.owl.carousel');
-      $('.btn-4').toggleClass('btn4Anim');
-      $(".inner-msg").fadeOut();
-      setTimeout(function(){ $('.btn-4').toggleClass('btn4Anim'); }, 100);
-  })
-  // Go to the previous item
-  $('.btn-3').click(function() {
-      // With optional speed parameter
-      // Parameters has to be in square bracket '[]'
-      owl.trigger('prev.owl.carousel');
-      $('.btn-3').toggleClass('btn3Anim');
-      $(".inner-msg").fadeOut();
-      setTimeout(function(){ $('.btn-3').toggleClass('btn3Anim'); }, 100);
-    })
-  // Go to the next item
-  $('.btn-1').click(function() {
-    owl.trigger('next.owl.carousel');
-    $('.btn-1').toggleClass('btn1Anim');
-    $(".inner-msg").fadeOut();
-    setTimeout(function(){ $('.btn-1').toggleClass('btn1Anim'); }, 100);
-  })
-  // Go to the previous item
-  $('.btn-2').click(function() {
-      // With optional speed parameter
-      // Parameters has to be in square bracket '[]'
-      owl.trigger('prev.owl.carousel');
-      $('.btn-2').toggleClass('btn2Anim');
-      $(".inner-msg").fadeOut();
-      setTimeout(function(){ $('.btn-2').toggleClass('btn2Anim'); }, 100);
-  })
 
   // Init AOS
   function aos_init() {
