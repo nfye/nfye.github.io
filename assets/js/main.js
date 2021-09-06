@@ -182,4 +182,6 @@
     aos_init();
   });
 
+  console.log("latest");
+
 })(jQuery);
