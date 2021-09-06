@@ -556,7 +556,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Mobile Navigation */
 .mobile-nav-toggle {
-  position: fixed;
+  /* position: fixed; */
   right: 15px;
   top: 15px;
   z-index: 9998;
@@ -3401,4 +3401,15 @@ section {
 }
 .w-full {
   width: 100%;
+}
+.menu-button-icon {
+  width: 22px;
+  height: auto;
+  fill: #00bf9a
+}
+.menu-button-icon path {
+  fill: #ec018c;
+}
+.mobile-nav-toggle {
+  position: absolute !important;
 }
