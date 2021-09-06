@@ -582,8 +582,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: rgb(9,8,29);
-  background: linear-gradient(97deg, rgba(9,8,29,1) 0%, rgba(26,22,62,1) 100%);
+  background: #5e3186;
+  background: linlinear-gradient(187deg, #5e3186 0%, #943471 50%, #d68766 100%);
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
