@@ -93,7 +93,8 @@
 
     $(document).on('click', '.mobile-nav-toggle', function(e) {
       $('body').toggleClass('mobile-nav-active');
-      $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu button-close');
+      $('.open-menu').toggle();
+      $('.close-button').toggle();
       $('.mobile-nav-overly').toggle();
     });
 
@@ -108,7 +109,8 @@
       if (!container.is(e.target) && container.has(e.target).length === 0) {
         if ($('body').hasClass('mobile-nav-active')) {
           $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu button-close');
+          $('.open-menu').toggle();
+          $('.close-button').toggle();
           $('.mobile-nav-overly').fadeOut();
         }
       }
