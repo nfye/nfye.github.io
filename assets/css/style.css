@@ -573,7 +573,9 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-toggle i {
   color: #ec018c;
 }
-
+.close-button {
+  display: none;
+}
 .mobile-nav {
   position: fixed;
   top: 55px;
