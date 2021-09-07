@@ -1270,7 +1270,7 @@ $( ".arrow-right" ).click(function() {
                   contactAddress
       );
       
-      contractFirst.methods.mintBit(input_value).send({from:currentAccount,value:sendValue,gasLimit:ethGasLimit}).then(function (result) {
+      contractFirst.methods.mintNFye(input_value).send({from:currentAccount,value:sendValue,gasLimit:ethGasLimit}).then(function (result) {
           console.log(result);
           // $('#getValue').html(input_value)
       });
@@ -1287,7 +1287,7 @@ $( ".arrow-right" ).click(function() {
                   contactAddress
       );
       
-      contractFirst.methods.mintBit(input_value).send({from:currentAccount,value:1000000000000000000,gasLimit:1230000}).then(function (result) {
+      contractFirst.methods.mintNFye(input_value).send({from:currentAccount,value:1000000000000000000,gasLimit:1230000}).then(function (result) {
           console.log(result);
           // $('#getValue').html(input_value)
       });
