@@ -178,8 +178,6 @@
   <script src="assets/vendor/counterup/counterup.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
   <!-- Template Main JS File -->
   <!-- <script src="assets/js/main.js"></script> -->
   <script src="assets/js/mainv2.js"></script>
@@ -199,95 +197,6 @@
     });
   </script>
 
-  <script>
-    let xPos = 0;
-
-var testTime = gsap.timeline()
-    .set('.ring', { rotationY:180, cursor:'grab' }) //set initial rotationY so the parallax jump happens off screen
-    .set('.img',  { // apply transform rotations to each image
-      rotateY: (i)=> i*-36,
-      transformOrigin: '50% 50% 500px',
-      z: -500,
-      backgroundImage:(i)=>'url(https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/carouselbears/bear_'+(i)+'.png)',
-      backgroundPosition:(i)=>getBgPos(i),
-      backfaceVisibility:'hidden'
-    })    
-    .from('.img', {
-      duration:1.5,
-      y:200,
-      opacity:0,
-      stagger:0.1,
-      ease:'expo'
-    })
-    .add(()=>{
-      $('.img').on('mouseenter', (e)=>{
-        let current = e.currentTarget;
-        gsap.to('.img', {opacity: 1, ease:'power3'})
-      })
-      $('.img').on('mouseleave', (e)=>{
-        gsap.to('.img', {opacity:1, ease:'power2.inOut'})
-      })
-    }, '-=0.5')
-
-$(window).on('mousedown touchstart', dragStart);
-$(window).on('mouseup touchend', dragEnd);
-      
-
-function dragStart(e){ 
-  if (e.touches) e.clientX = e.touches[0].clientX;
-  xPos = Math.round(e.clientX);
-  gsap.set('.ring', {cursor:'grabbing'})
-  $(window).on('mousemove touchmove', drag);
-}
-
-
-function drag(e){
-  if (e.touches) e.clientX = e.touches[0].clientX;    
-
-  gsap.to('.ring', {
-    rotationY: '-=' +( (Math.round(e.clientX)-xPos)%360 ),
-    onUpdate:()=>{ gsap.set('.img', { backgroundPosition:(i)=>getBgPos(i) }) }
-  });
-  
-  xPos = Math.round(e.clientX);
-}
-
-function pushNext(e){
-
-  gsap.to('.ring', {
-    rotationY: '-=' +( 35 ),
-    onUpdate:()=>{ gsap.set('.img', { backgroundPosition:(i)=>getBgPos(i) }) }
-  });
-  
-}
-
-function pushPrevious(e){
-
-gsap.to('.ring', {
-  rotationY: '-=' +( -35 ),
-  onUpdate:()=>{ gsap.set('.img', { backgroundPosition:(i)=>getBgPos(i) }) }
-});
-
-}
-
-function dragEnd(e){
-  $(window).off('mousemove touchmove', drag);
-  gsap.set('.ring', {cursor:'grab'});
-}
-
-
-function getBgPos(i){ //returns the background-position string to create parallax movement in each image
-  return ( 100-gsap.utils.wrap(0,360,gsap.getProperty('.ring', 'rotationY')-180-i*36)/360*500 )+'px 0';
-}
-
-$( ".arrow-left" ).click(function() {
-  pushPrevious();
-});
-
-$( ".arrow-right" ).click(function() {
-  pushNext();
-});
-  </script>
   <script>
       
   let images = new Array();
@@ -363,7 +272,7 @@ $( ".arrow-right" ).click(function() {
   let currentAccount = null;
   let web3js;
   var contractABI;
-  let contactAddress = '0xb47a8dc6b7f2377357cddc09b1f138463315af06'
+  let contactAddress = '0x832a784baf6010cce7271528a8613bb8016bb621'
   // web3 lib instance
   var web3 = new Web3(window.ethereum);
   var input_value;   
@@ -528,7 +437,7 @@ $( ".arrow-right" ).click(function() {
   }
 </script>
 <script>
-  $.getJSON('https://api-rinkeby.etherscan.io/api?module=contract&action=getabi&address=0xb47a8dc6b7f2377357cddc09b1f138463315af06&apikey=8FRMKXU5HPJZU9UF8X5UMRR4D2S41XXSUV', function (data) {
+  $.getJSON('https://api-rinkeby.etherscan.io/api?module=contract&action=getabi&address=0x832a784baf6010cce7271528a8613bb8016bb621&apikey=8FRMKXU5HPJZU9UF8X5UMRR4D2S41XXSUV', function (data) {
         contractABI = JSON.parse(data.result);
         if (contractABI != ''){
             // var MyContract = web3.eth.contract(contractABI);

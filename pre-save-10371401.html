@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" class="h-unset">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="NFYE, crypto,bitcoin,ethereum,nft,cryptopunk" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/NFYE_FAVICON.gif" rel="icon">
+  <link href="assets/img/NFYE_APPLE.gif" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+
+
+  <!-- Primary Meta Tags -->
+<title>NFYE</title>
+<meta name="title" content="NFYE">
+<meta name="description" content="NFYE is a one-of-a-kind collection and the first to bridge the allure of collectible sneakers within the NFT ecosystem.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nftye.io/">
+<meta property="og:title" content="NFYE">
+<meta property="og:description" content="NFYE is a one-of-a-kind collection and the first to bridge the allure of collectible sneakers within the NFT ecosystem.">
+<meta property="og:image" content="https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/NFYE_LOGO.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://nftye.io/">
+<meta property="twitter:title" content="NFYE">
+<meta property="twitter:description" content="NFYE is a one-of-a-kind collection and the first to bridge the allure of collectible sneakers within the NFT ecosystem.">
+<meta property="twitter:image" content="https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/NFYE_LOGO.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+</head>
+
+<body>
+
+<div class="star"></div>
+<div class="meteor-shower">
+  <div class="meteor-1"></div>
+  <div class="meteor-2"></div>
+  <div class="meteor-3"></div>
+  <div class="meteor-4"></div>
+  <div class="meteor-5"></div>
+  <div class="meteor-6"></div>
+  <div class="meteor-7"></div>
+  <div class="meteor-8"></div>
+  <div class="meteor-9"></div>
+  <div class="meteor-10"></div>
+  <div class="meteor-11"></div>
+  <div class="meteor-12"></div>
+  <div class="meteor-13"></div>
+  <div class="meteor-14"></div>
+  <div class="meteor-15"></div>
+    
+</div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center">
+
+      <!-- <h1 class="logo mr-auto"><a href="index.html">NFYE<span>.</span></a></h1> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo mr-auto logo-img"><img src="assets/img/NFYE_TEXT.svg" alt=""></a>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="/rarity">Rarity</a></li>
+          <!-- <li><a href="https://etherscan.io/">Etherscan</a></li> -->
+          <li><a href="https://twitter.com/nfyenft">Twitter</a></li>
+          <li><a href="https://discord.gg/3TDJeA49">Discord</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h3><span>Total &nbsp;Minted</span></h3>
+        </div>
+        <div class="row mint-count">
+              <span data-toggle="counter-up" class="mintedAmount">0</span>/<span data-toggle="counter-up">20,000</span>
+        </div>
+      </div>
+
+      <div class="container text-white">
+
+        <div class="row text-center mt-5">
+            <div class="col-md-12">
+                <img id="metaicon" class="meta-gray" width="125" height="265" src="./assets/img/Metamask_bear_125x.png" alt="">
+            </div>
+        </div>
+        <div style="margin-top: 30px;" class="row text-center">
+            <div class="col-md-12">
+                <button id="enableMetamask" class="btn btn-get-started">Connect with Metamask</button>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-12">
+                <span id="status"></span>
+            </div>
+        </div>
+        <section>
+            <div class="row text-center mt-3">
+                <div class="col-12">
+                    <span class="mb-3">ENTER &nbsp; AMOUNT (MAX 10):</span>
+                    <input id="value" type="text" name="quantity" min="1" max="10" class="form-control mt-3 max-300" value="1">
+                    <button id="setValue" class="btn btn-get-started mt-3">Mint</button> <button id="mintMax" class="btn btn-get-started mt-3 ml-3">Mint Max</button>
+                </div>
+    
+            </div>
+        </section>
+        </div>
+
+    </section><!-- End Counts Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-center">
+        <a href="https://twitter.com/nfyenft">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+        </a>
+        <a href="https://discord.gg/3TDJeA49">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="discord" class="svg-inline--fa fa-discord fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"></path></svg>
+        </a>
+      </div>
+      <div class="footer-center mt-5">
+        <!-- <a class="footer" href="/terms.html">Terms</a>         -->
+      </div>
+      <div class="footer-center mt-5">
+        &copy; NFYE 2021.
+      </div>      
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader">
+    <div class="inner-preloader">
+      <div class="star"></div>
+    </div>
+  </div>
+  <a href="#" class="back-to-top"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+  <script src="./assets/js/countdown.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- Template Main JS File -->
+  <!-- <script src="assets/js/main.js"></script> -->
+  <script src="assets/js/mainv2.js"></script>
+  <script>
+    var fridayTime = moment("2021-09-08T20:00:00Z", moment.ISO_8601);
+  
+    $('#clock').countdown(fridayTime.toDate(), function(event) {
+    var d = event.strftime('%D');
+    var h = event.strftime('%H');
+    var m = event.strftime('%M');
+    var s = event.strftime('%S');
+    
+    $('#daystg').html(event.strftime('%D'));
+    $('#hourstg').html(event.strftime('%H' ));
+    $('#minutestg').html(event.strftime('%M'));
+    $('#secondstg').html(event.strftime('%S'));
+    });
+  </script>
+
+  <script>
+      
+  let images = new Array();
+  // images[0] = "https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/bears/bear_1.png"
+  images[0] = "https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/bears/bear_2.png"
+  images[1] = "https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/bears/bear_3.png"
+  images[2] = "https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/bears/bear_4.png"
+  images[3] = "https://raw.githubusercontent.com/NFYE/NFYE.github.io/main/assets/img/bears/bear_1.png"
+  /* document.getElementById("myImg").src = images[0]; */
+  let counter = 1;
+
+  setTimeout(function(){ 
+    document.getElementById("bearImg").src =images[0];
+   }, 4800);
+
+    setInterval(()=>{
+      let item = images[counter];
+
+      
+  setTimeout(function(){ 
+    document.getElementById("bearImg").src =item;
+      // console.log(item)
+      counter++;
+      if(counter>(images.length-1))
+      counter=0;
+    },4800)
+  }, 6000);
+  
+  </script>
+
+  <script>
+    var fridayTime = moment("2021-09-08T20:00:00Z", moment.ISO_8601);
+  
+    $('#clock').countdown(fridayTime.toDate(), function(event) {
+    var d = event.strftime('%D');
+    var h = event.strftime('%H');
+    var m = event.strftime('%M');
+    var s = event.strftime('%S');
+    
+    $('#daystg').html(event.strftime('%D'));
+    $('#hourstg').html(event.strftime('%H' ));
+    $('#minutestg').html(event.strftime('%M'));
+    $('#secondstg').html(event.strftime('%S'));
+    });
+  </script>
+  <script>
+    var message="Right-click has been disabled";
+    function clickIE() {
+        if (document.all) {
+            (message);
+            return false;
+        }
+    }
+    function clickNS(e) {
+        if (document.layers || (document.getElementById && !document.all)) {
+            if (e.which == 2||e.which == 3) {
+                (message);
+                return false;
+            }
+        }
+    }
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS;
+    } else {
+        document.onmouseup = clickNS;
+        document.oncontextmenu = clickIE;
+    }
+    document.oncontextmenu = new Function("return false");
+  </script>
+
+<script>
+  let currentAccount = null;
+  let web3js;
+  var contractABI;
+  let contactAddress = '0x832a784baf6010cce7271528a8613bb8016bb621'
+  // web3 lib instance
+  var web3 = new Web3(window.ethereum);
+  var input_value;   
+
+  function handleAccountsChanged(accounts) {
+      console.log('Calling HandleChanged')
+
+      if (accounts.length === 0) {
+          console.log('Please connect to MetaMask.');
+          $('#enableMetamask').html('Connect with Metamask')
+      } else if (accounts[0] !== currentAccount) {
+          currentAccount = accounts[0];
+          $('#enableMetamask').html(currentAccount)
+          $('#status').html('')          
+          setTimeout(getMinted(), 1000)
+          if(currentAccount != null) {
+              // Set the button label
+              $('#enableMetamask').html(currentAccount)
+          }
+      }
+      console.log('WalletAddress in HandleAccountChanged ='+currentAccount)
+  }
+
+  function connect() {
+      console.log('Calling connect()')
+      ethereum
+      .request({ method: 'eth_requestAccounts' })
+      .then(handleAccountsChanged)
+      .catch((err) => {
+      if (err.code === 4001) {
+          // EIP-1193 userRejectedRequest error
+          // If this happens, the user rejected the connection request.
+          console.log('Please connect to MetaMask.');
+          $('#status').html('You refused to connect Metamask')
+
+      } else {
+          console.error(err);
+      }
+      });
+  }
+
+  function detectMetaMask() {
+      if (typeof window.ethereum !== 'undefined') {
+          return true
+      } else {
+          return false
+      }
+  }
+
+  async function getValue() {
+      console.log('GetValue')
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+
+      console.log(contractFirst.methods)
+      contractFirst.methods.saleIsActive().call().then(function (result) {                
+          console.log(result)
+          if (result==true) {
+            console.log("was true");
+
+          } else {
+            console.log("was false");
+
+          }
+      });
+  }
+
+  async function getMinted() {
+      console.log('GetValue')
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+
+      contractFirst.methods.totalSupply().call().then(function (result) {                
+          $(".mintedAmount").html(result)
+      });
+  }
+
+  async function setValue() {
+      console.log('Set Value')
+
+      input_value = $('#value').val()
+
+      let sendValue=0;
+      let ethGasLimit=0;
+      if (input_value == '1') {
+        sendValue=100000000000000000;
+        ethGasLimit=240000;
+      } else if (input_value == '2') {
+        sendValue=200000000000000000;
+        ethGasLimit=350000;
+      } else if (input_value == '3') {
+        sendValue=300000000000000000;
+        ethGasLimit=470000;
+      } else if (input_value == '4') {
+        sendValue=400000000000000000;
+        ethGasLimit=580000;
+      } else if (input_value == '5') {
+        sendValue=500000000000000000;
+        ethGasLimit=700000;
+      } else if (input_value == '6') {
+        sendValue=600000000000000000;
+        ethGasLimit=820000;
+      } else if (input_value == '7') {
+        sendValue=700000000000000000;
+        ethGasLimit=935000;
+      } else if (input_value == '8') {
+        sendValue=800000000000000000;
+        ethGasLimit=1050000;
+      } else if (input_value == '9') {
+        sendValue=900000000000000000;
+        ethGasLimit=1160000;
+      } else if (input_value == '10') {
+        sendValue=1000000000000000000;
+        ethGasLimit=1280000;
+      }
+
+      if(input_value.trim() == '') {
+          input_value = 0
+      }
+      if(!isNaN(input_value)) {
+          input_value = parseInt(input_value)
+      }
+
+      console.log(contractABI);
+      console.log(contactAddress)
+
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+      
+      contractFirst.methods.mintNFye(input_value).send({from:currentAccount,value:sendValue}).then(function (result) {
+          console.log(result);
+          // $('#getValue').html(input_value)
+      });
+
+  }
+
+
+  async function mintMax() {
+
+      input_value = 10;
+      
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+      
+      contractFirst.methods.mintNFye(input_value).send({from:currentAccount,value:1000000000000000000}).then(function (result) {
+          console.log(result);
+          // $('#getValue').html(input_value)
+      });
+
+  }
+</script>
+<script>
+  $.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0x832a784baf6010cce7271528a8613bb8016bb621&apikey=8FRMKXU5HPJZU9UF8X5UMRR4D2S41XXSUV', function (data) {
+        contractABI = JSON.parse(data.result);
+        if (contractABI != ''){
+            // var MyContract = web3.eth.contract(contractABI);
+            // var myContractInstance = MyContract.at("0x87ed28e903cad56eb86449fa1df3f462e12d73a5");
+            // var result = myContractInstance.memberId("0xfe8ad7dd2f564a877cc23feea6c0a9cc2e783715");
+            // console.log("result1 : " + result);            
+            // var result = myContractInstance.members(1);
+            // console.log("result2 : " + result);
+            console.log(contractABI);
+            //Fetch Value from Smart Contract
+            getValue()
+        } else {
+            console.log("Error" );
+        }
+    });
+
+  $( document ).ready(function() {
+      m = detectMetaMask()
+      if(m) {
+          $('#metaicon').removeClass('meta-gray')
+          $('#metaicon').addClass('meta-normal')
+          $('#enableMetamask').attr('disabled',false)
+          connect() // Make sure the connected wallet is being returned          
+      } else {
+          $('#enableMetamask').attr('disabled',true)
+          $('#metaicon').removeClass('meta-normal')
+          $('#metaicon').addClass('meta-gray')
+      }
+
+      $('#enableMetamask').click(function() {
+          connect()
+      });
+
+      $('#setValue').click(function() {
+          setValue()
+      });
+
+      $('#mintMax').click(function() {
+          mintMax()
+      });      
+
+      setInterval(function(){ 
+        console.log('get value')
+        getValue()
+        console.log('get minted')
+        getMinted()
+      }, 5000);
+
+      // try {
+      //     web3 = new Web3(new Web3.providers.HttpProvider(window.ethereum));
+      // } catch (error) {
+      //     console.log(error);
+      //     alert(error)
+      // }
+
+      // $("input[type='text'][name='quantity']").change(function() {
+      //     if ($(this).val() > 9) {
+      //         alert("Value must not be greater 8");
+      //         $(this).val('');
+      //         $(this).focus();
+      //     }
+      // });
+
+  })
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YVFNE4RRVC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YVFNE4RRVC');
+</script>
+</body>
+
+</html>
