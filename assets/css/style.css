@@ -592,6 +592,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   padding: 10px 0;
 }
+.meta-gray {
+  filter: grayscale(1);
+}
+.meta-normal {
+  filter: none!important;
+}
 .max-300 {
   width: 100%;
   max-width: 300px;
