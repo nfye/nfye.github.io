@@ -592,7 +592,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   padding: 10px 0;
 }
-
+.max-300 {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
 .bear-container-hero {
   animation: float 3s ease-in-out infinite;
 }
