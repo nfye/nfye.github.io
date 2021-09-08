@@ -374,7 +374,7 @@
                 <div class="col-12">
                     <span class="mb-3">ENTER &nbsp; AMOUNT (MAX 10):</span>
                     <input id="value" type="text" name="quantity" min="1" max="10" class="form-control mt-3 max-300" value="1">
-                    <button id="setValue" class="btn btn-get-started mt-3">Mint</button> <button id="mintMax" class="btn btn-get-started mt-3 ml-3">Mint Max</button>
+                    <button id="setValue" disabled="true" class="btn btn-get-started mt-3">Mint</button> <button id="mintMax" disabled="true" class="btn btn-get-started mt-3 ml-3">Mint Max</button>
                 </div>
     
             </div>
@@ -1198,8 +1198,14 @@ $( ".arrow-right" ).click(function() {
           console.log(result)
           if (result==true) {
             console.log("was true");
+            $( "#mintMax" ).prop( "disabled", false );
+            $( "#setValue" ).prop( "disabled", false );
+
           } else {
             console.log("was false");
+            $( "#mintMax" ).prop( "disabled", true );
+            $( "#setValue" ).prop( "disabled", true );
+
           }
       });
   }
