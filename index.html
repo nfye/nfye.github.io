@@ -106,24 +106,6 @@
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       
-      <div class="countdown">        
-        <div class="clock-wrapper-target">  
-        <div class="clock-wrapper-target text-center">  
-          <div class="time-tg" id="clock">
-            <div id="daystg" class="cd-tg"></div>
-            <div id="hourstg" class="cd-tg">24</div>
-            <div id="minutestg" class="cd-tg">00</div>
-            <div id="secondstg" class="cd-tg">00</div>
-          </div>
-          <div class="label-wrapper-target">
-            <div class="label-target">days</div>
-            <div class="label-target">hours</div>
-            <div class="label-target">minutes</div>
-            <div class="label-target">seconds</div>          
-          </div>
-        </div>
-        </div> 
-      </div> 
       <!-- <div class="row reverse-mobile"> -->
       <div class="row reverse-mobile no-float">
         <div class="col-12 col-md-6 left-text-col">
@@ -285,11 +267,6 @@
 
   <main id="main">    
 
-    <div id="viewport" >
-      <div id="world" ></div>
-    </div>
-
-
     <!-- ======= About Section ======= -->
     <section id="about" class="about" data-aos="fade-up">
       
@@ -340,17 +317,17 @@
 
     </section><!-- End About Section -->
 
+    
     <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts" data-aos="fade-up">
-      <div class="container">
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h3><span>TOTAL MINTED</span></h3>          
+          <h3><span>Total &nbsp;Minted</span></h3>
         </div>
-        <div class="row mint-count w-700">
+        <div class="row mint-count">
               <span data-toggle="counter-up" class="mintedAmount">0</span>/<span data-toggle="counter-up">20,000</span>
         </div>
-        <p class="text-white pt-3 text-center">Minting is the process of buying an NFT at retail price. You will need to connect your MetaMask wallet on the day of the release and will need to hold Ethereum in your MetaMask wallet to purchase one of our exclusive NFYE NFTs. Mint price is 0.1 ETH.</p>
       </div>
 
       <div class="container text-white">
@@ -362,7 +339,7 @@
         </div>
         <div style="margin-top: 30px;" class="row text-center">
             <div class="col-md-12">
-                <button id="enableMetamask" class="btn btn-get-started" disabled>Metamask Currently Disabled</button>
+                <button id="enableMetamask" class="btn btn-get-started">Connect with Metamask</button>
             </div>
         </div>
         <div class="row text-center">
@@ -370,7 +347,16 @@
                 <span id="status"></span>
             </div>
         </div>
-        
+        <section>
+            <div class="row text-center mt-3">
+                <div class="col-12">
+                    <span class="mb-3">ENTER &nbsp; AMOUNT (MAX 10):</span>
+                    <input id="value" type="text" name="quantity" min="1" max="10" class="form-control mt-3 max-300" value="1">
+                    <button id="setValue" class="btn btn-get-started mt-3">Mint</button> <button id="mintMax" class="btn btn-get-started mt-3 ml-3">Mint Max</button>
+                </div>
+    
+            </div>
+        </section>
         </div>
 
     </section><!-- End Counts Section -->
@@ -556,21 +542,6 @@
   <!-- Template Main JS File -->
   <!-- <script src="assets/js/main.js"></script> -->
   <script src="assets/js/mainv2.js"></script>
-  <script>
-    var fridayTime = moment("2021-09-08T20:00:00Z", moment.ISO_8601);
-  
-    $('#clock').countdown(fridayTime.toDate(), function(event) {
-    var d = event.strftime('%D');
-    var h = event.strftime('%H');
-    var m = event.strftime('%M');
-    var s = event.strftime('%S');
-    
-    $('#daystg').html(event.strftime('%D'));
-    $('#hourstg').html(event.strftime('%H' ));
-    $('#minutestg').html(event.strftime('%M'));
-    $('#secondstg').html(event.strftime('%S'));
-    });
-  </script>
 
   <script>
     let xPos = 0;
@@ -733,323 +704,6 @@ $( ".arrow-right" ).click(function() {
   </script>
 
 <script>
-  (function () {
-    var lastTime = 0;
-    var vendors = ["ms", "moz", "webkit", "o"];
-    for (
-      var x = 0;
-      x < vendors.length && !window.requestAnimationFrame;
-      ++x
-    ) {
-      window.requestAnimationFrame =
-        window[vendors[x] + "RequestAnimationFrame"];
-      window.cancelRequestAnimationFrame =
-        window[vendors[x] + "CancelRequestAnimationFrame"];
-    }
-
-    if (!window.requestAnimationFrame)
-      window.requestAnimationFrame = function (callback, element) {
-        var currTime = new Date().getTime();
-        var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-        var id = window.setTimeout(function () {
-          callback(currTime + timeToCall);
-        }, timeToCall);
-        lastTime = currTime + timeToCall;
-        return id;
-      };
-
-    if (!window.cancelAnimationFrame)
-      window.cancelAnimationFrame = function (id) {
-        clearTimeout(id);
-      };
-  })();
-
-  var layers = [],
-    objects = [],
-    textures = [],
-    world = document.getElementById("world"),
-    viewport = document.getElementById("viewport"),
-    d = 0,
-    p = 100,
-    worldXAngle = 0,
-    worldYAngle = 0,
-    computedWeights = [];
-
-  var links = document.querySelectorAll("a[rel=external]");
-  for (var j = 0; j < links.length; j++) {
-    var a = links[j];
-    a.addEventListener(
-      "click",
-      function (e) {
-        window.open(this.href, "_blank");
-        e.preventDefault();
-      },
-      false
-    );
-  }
-
-  viewport.style.webkitPerspective = p;
-  viewport.style.MozPerspective = p + "px";
-  viewport.style.oPerspective = p;
-  viewport.style.perspective = p;
-
-  textures = [
-    { name: "white cloud", file: "cloud.png", opacity: 1, weight: 0 },
-    { name: "dark cloud", file: "darkCloud.png", opacity: 1, weight: 0 },
-    { name: "smoke cloud", file: "smoke.png", opacity: 1, weight: 0 },
-    { name: "explosion", file: "explosion.png", opacity: 1, weight: 0 },
-    { name: "explosion 2", file: "explosion2.png", opacity: 1, weight: 0 },
-    { name: "box", file: "box.png", opacity: 1, weight: 0 },
-  ];
-
-  var el = document.getElementById("textureList");
-
-  generate();
-
-
-  function setTextureUsage(id, mode) {
-    var modes = ["None", "Few", "Normal", "Lot"];
-    var weights = { None: 0, Few: 0.3, Normal: 0.7, Lot: 1 };
-    for (var j = 0; j < modes.length; j++) {
-      var el = document.getElementById("btn" + modes[j] + id);
-      el.className = el.className.replace(" active", "");
-      if (modes[j] == mode) {
-        el.className += " active";
-        textures[id].weight = weights[mode];
-      }
-    }
-  }
-
-
-  var el = document.getElementById("fullscreenBtn");
-  if (el) {
-    var options = document.getElementById("options");
-    el.addEventListener(
-      "click",
-      function (e) {
-        if (document.body.webkitRequestFullScreen) {
-          document.body.onwebkitfullscreenchange = function (e) {
-            //	options.style.display = 'none';
-            document.body.style.width = window.innerWidth + "px";
-            document.body.style.height = window.innerHeight + "px";
-            document.body.onwebkitfullscreenchange = function () {
-              //		options.style.display = 'block';
-            };
-          };
-          document.body.webkitRequestFullScreen();
-        }
-        if (document.body.mozRequestFullScreen) {
-          /*document.body.onmozfullscreenchange = function( e ) {
-      options.style.display = 'none';
-      document.body.onmozfullscreenchange = function( e ) {
-        options.style.display = 'block';
-      };
-    };*/
-          document.body.mozRequestFullScreen();
-        }
-        e.preventDefault();
-      },
-      false
-    );
-  }
-
-  function createCloud() {
-    var div = document.createElement("div");
-    div.className = "cloudBase";
-    var x = 256 - Math.random() * 512;
-    var y = 256 - Math.random() * 512;
-    var z = 256 - Math.random() * 512;
-    var t =
-      "translateX( " +
-      x +
-      "px ) translateY( " +
-      y +
-      "px ) translateZ( " +
-      z +
-      "px )";
-    div.style.webkitTransform = div.style.MozTransform = div.style.oTransform = div.style.transform = t;
-    world.appendChild(div);
-
-    for (var j = 0; j < 10 + Math.round(Math.random() * 10); j++) {
-      var cloud = document.createElement("img");
-      cloud.style.opacity = 0;
-      var r = Math.random();
-      var src = "purplecloud.png";
-      for (var k = 0; k < computedWeights.length; k++) {
-        if (r >= computedWeights[k].min && r <= computedWeights[k].max) {
-          (function (img) {
-            img.addEventListener("load", function () {
-              img.style.opacity = 0.8;
-            });
-          })(cloud);
-          src = computedWeights[k].src;
-        }
-      }
-      if (computedWeights.length === 0) {
-        cloud.style.opacity = 0.8;
-      }
-      cloud.setAttribute("src", src);
-      cloud.className = "cloudLayer";
-
-      var x = 256 - Math.random() * 512;
-      var y = 256 - Math.random() * 512;
-      var z = 100 - Math.random() * 200;
-      var a = Math.random() * 360;
-      var s = 0.25 + Math.random();
-      x *= 0.2;
-      y *= 0.2;
-      cloud.data = {
-        x: x,
-        y: y,
-        z: z,
-        a: a,
-        s: s,
-        speed: 0.1 * Math.random(),
-      };
-      var t =
-        "translateX( " +
-        x +
-        "px ) translateY( " +
-        y +
-        "px ) translateZ( " +
-        z +
-        "px ) rotateZ( " +
-        a +
-        "deg ) scale( " +
-        s +
-        " )";
-      cloud.style.webkitTransform = cloud.style.MozTransform = cloud.style.oTransform = cloud.style.transform = t;
-
-      div.appendChild(cloud);
-      layers.push(cloud);
-    }
-
-    return div;
-  }
-
-  // window.addEventListener("mousewheel", onContainerMouseWheel);
-  // window.addEventListener("DOMMouseScroll", onContainerMouseWheel);
-  //window.addEventListener( 'deviceorientation', orientationhandler, false );
-  //window.addEventListener( 'MozOrientation', orientationhandler, false );
-
-
-  window.addEventListener("keydown", function (e) {
-    if (e.keyCode == 32) generate();
-  });
-
-  window.addEventListener("mousemove", function (e) {
-    worldYAngle = -(0.5 - e.clientX / window.innerWidth) * 9;
-    worldXAngle = (0.5 - e.clientY / window.innerHeight) * 9;
-    //worldXAngle = .1 * ( e.clientY - .5 * window.innerHeight );
-    //worldYAngle = .1 * ( e.clientX - .5 * window.innerWidth );
-    updateView();
-  });
-
-  window.addEventListener("touchmove", function (e) {
-    var ptr = e.changedTouches.length;
-    while (ptr--) {
-      var touch = e.changedTouches[ptr];
-      worldYAngle = -(0.5 - touch.pageX / window.innerWidth) * 180;
-      worldXAngle = (0.5 - touch.pageY / window.innerHeight) * 180;
-      updateView();
-    }
-    e.preventDefault();
-  });
-
-  function generate() {
-    objects = [];
-    if (world.hasChildNodes()) {
-      while (world.childNodes.length >= 1) {
-        world.removeChild(world.firstChild);
-      }
-    }
-    computedWeights = [];
-    var total = 0;
-    for (var j = 0; j < textures.length; j++) {
-      if (textures[j].weight > 0) {
-        total += textures[j].weight;
-      }
-    }
-    var accum = 0;
-    for (var j = 0; j < textures.length; j++) {
-      if (textures[j].weight > 0) {
-        var w = textures[j].weight / total;
-        computedWeights.push({
-          src: textures[j].file,
-          min: accum,
-          max: accum + w,
-        });
-        accum += w;
-      }
-    }
-    for (var j = 0; j < 5; j++) {
-      objects.push(createCloud());
-    }
-  }
-
-  function updateView() {
-    var t =
-      "translateZ( " +
-      d +
-      "px ) rotateX( " +
-      worldXAngle +
-      "deg) rotateY( " +
-      worldYAngle +
-      "deg)";
-    world.style.webkitTransform = world.style.MozTransform = world.style.oTransform = world.style.transform = t;
-  }
-
-  function onContainerMouseWheel(event) {
-    event = event ? event : window.event;
-    d = d - (event.detail ? event.detail * -5 : event.wheelDelta / 8);
-    updateView();
-  }
-
-  function orientationhandler(e) {
-    if (!e.gamma && !e.beta) {
-      e.gamma = -(e.x * (180 / Math.PI));
-      e.beta = -(e.y * (180 / Math.PI));
-    }
-
-    var x = e.gamma;
-    var y = e.beta;
-
-    worldXAngle = y;
-    worldYAngle = x;
-    updateView();
-  }
-
-  function update() {
-    for (var j = 0; j < layers.length; j++) {
-      var layer = layers[j];
-      layer.data.a += layer.data.speed;
-      var t =
-        "translateX( " +
-        layer.data.x +
-        "px ) translateY( " +
-        layer.data.y +
-        "px ) translateZ( " +
-        layer.data.z +
-        "px ) rotateY( " +
-        -worldYAngle +
-        "deg ) rotateX( " +
-        -worldXAngle +
-        "deg ) rotateZ( " +
-        layer.data.a +
-        "deg ) scale( " +
-        layer.data.s +
-        ")";
-      layer.style.webkitTransform = layer.style.MozTransform = layer.style.oTransform = layer.style.transform = t;
-      //layer.style.webkitFilter = 'blur(5px)';
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  update();
-
-</script>
-<script>
   $(() => {
   let stickyTop = 0,
   scrollTarget = false;
@@ -1133,6 +787,241 @@ $( ".arrow-right" ).click(function() {
 
   gtag('config', 'G-YVFNE4RRVC');
 </script>
+
+
+
+<script>
+  let currentAccount = null;
+  let web3js;
+  var contractABI;
+  let contactAddress = '0x832a784baf6010cce7271528a8613bb8016bb621'
+  // web3 lib instance
+  var web3 = new Web3(window.ethereum);
+  var input_value;   
+
+  function handleAccountsChanged(accounts) {
+      console.log('Calling HandleChanged')
+
+      if (accounts.length === 0) {
+          console.log('Please connect to MetaMask.');
+          $('#enableMetamask').html('Connect with Metamask')
+      } else if (accounts[0] !== currentAccount) {
+          currentAccount = accounts[0];
+          $('#enableMetamask').html(currentAccount)
+          $('#status').html('')          
+          setTimeout(getMinted(), 1000)
+          if(currentAccount != null) {
+              // Set the button label
+              $('#enableMetamask').html(currentAccount)
+          }
+      }
+      console.log('WalletAddress in HandleAccountChanged ='+currentAccount)
+  }
+
+  function connect() {
+      console.log('Calling connect()')
+      ethereum
+      .request({ method: 'eth_requestAccounts' })
+      .then(handleAccountsChanged)
+      .catch((err) => {
+      if (err.code === 4001) {
+          // EIP-1193 userRejectedRequest error
+          // If this happens, the user rejected the connection request.
+          console.log('Please connect to MetaMask.');
+          $('#status').html('You refused to connect Metamask')
+
+      } else {
+          console.error(err);
+      }
+      });
+  }
+
+  function detectMetaMask() {
+      if (typeof window.ethereum !== 'undefined') {
+          return true
+      } else {
+          return false
+      }
+  }
+
+  async function getValue() {
+      console.log('GetValue')
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+
+      console.log(contractFirst.methods)
+      contractFirst.methods.saleIsActive().call().then(function (result) {                
+          console.log(result)
+          if (result==true) {
+            console.log("was true");
+
+          } else {
+            console.log("was false");
+          }
+      });
+  }
+
+  async function getMinted() {
+      console.log('GetValue')
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+
+      contractFirst.methods.totalSupply().call().then(function (result) {                
+          $(".mintedAmount").html(result)
+      });
+  }
+
+  async function setValue() {
+      console.log('Set Value')
+
+      input_value = $('#value').val()
+
+      let sendValue=0;
+      let ethGasLimit=0;
+      if (input_value == '1') {
+        sendValue=100000000000000000;
+        ethGasLimit=240000;
+      } else if (input_value == '2') {
+        sendValue=200000000000000000;
+        ethGasLimit=350000;
+      } else if (input_value == '3') {
+        sendValue=300000000000000000;
+        ethGasLimit=470000;
+      } else if (input_value == '4') {
+        sendValue=400000000000000000;
+        ethGasLimit=580000;
+      } else if (input_value == '5') {
+        sendValue=500000000000000000;
+        ethGasLimit=700000;
+      } else if (input_value == '6') {
+        sendValue=600000000000000000;
+        ethGasLimit=820000;
+      } else if (input_value == '7') {
+        sendValue=700000000000000000;
+        ethGasLimit=935000;
+      } else if (input_value == '8') {
+        sendValue=800000000000000000;
+        ethGasLimit=1050000;
+      } else if (input_value == '9') {
+        sendValue=900000000000000000;
+        ethGasLimit=1160000;
+      } else if (input_value == '10') {
+        sendValue=1000000000000000000;
+        ethGasLimit=1280000;
+      }
+
+      if(input_value.trim() == '') {
+          input_value = 0
+      }
+      if(!isNaN(input_value)) {
+          input_value = parseInt(input_value)
+      }
+
+      console.log(contractABI);
+      console.log(contactAddress)
+
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+      
+      contractFirst.methods.mintNFYE(input_value).send({from:currentAccount,value:sendValue,gasLimit:ethGasLimit}).then(function (result) {
+          console.log(result);
+          // $('#getValue').html(input_value)
+      });
+
+  }
+
+
+  async function mintMax() {
+
+      input_value = 10;
+      
+      const contractFirst = new web3.eth.Contract(
+                  contractABI,
+                  contactAddress
+      );
+      
+      contractFirst.methods.mintNFYE(input_value).send({from:currentAccount,value:1000000000000000000,gasLimit:1280000}).then(function (result) {
+          console.log(result);
+          // $('#getValue').html(input_value)
+      });
+
+  }
+</script>
+<script>
+  $.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0x832a784baf6010cce7271528a8613bb8016bb621&apikey=8FRMKXU5HPJZU9UF8X5UMRR4D2S41XXSUV', function (data) {
+        contractABI = JSON.parse(data.result);
+        if (contractABI != ''){
+            // var MyContract = web3.eth.contract(contractABI);
+            // var myContractInstance = MyContract.at("0x87ed28e903cad56eb86449fa1df3f462e12d73a5");
+            // var result = myContractInstance.memberId("0xfe8ad7dd2f564a877cc23feea6c0a9cc2e783715");
+            // console.log("result1 : " + result);            
+            // var result = myContractInstance.members(1);
+            // console.log("result2 : " + result);
+            console.log(contractABI);
+            //Fetch Value from Smart Contract
+            getValue()
+        } else {
+            console.log("Error" );
+        }
+    });
+
+  $( document ).ready(function() {
+      m = detectMetaMask()
+      if(m) {
+          $('#metaicon').removeClass('meta-gray')
+          $('#metaicon').addClass('meta-normal')
+          $('#enableMetamask').attr('disabled',false)
+          connect() // Make sure the connected wallet is being returned          
+      } else {
+          $('#enableMetamask').attr('disabled',true)
+          $('#metaicon').removeClass('meta-normal')
+          $('#metaicon').addClass('meta-gray')
+      }
+
+      $('#enableMetamask').click(function() {
+          connect()
+      });
+
+      $('#setValue').click(function() {
+          setValue()
+      });
+
+      $('#mintMax').click(function() {
+          mintMax()
+      });      
+
+      setInterval(function(){ 
+        console.log('get value')
+        getValue()
+        console.log('get minted')
+        getMinted()
+      }, 5000);
+
+      // try {
+      //     web3 = new Web3(new Web3.providers.HttpProvider(window.ethereum));
+      // } catch (error) {
+      //     console.log(error);
+      //     alert(error)
+      // }
+
+      // $("input[type='text'][name='quantity']").change(function() {
+      //     if ($(this).val() > 9) {
+      //         alert("Value must not be greater 8");
+      //         $(this).val('');
+      //         $(this).focus();
+      //     }
+      // });
+
+  })
+
+</script>
+
 </body>
 
 </html>
